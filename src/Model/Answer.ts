@@ -1,8 +1,13 @@
 class Answer {
 
+    constructor() {
+        this.isSelected = false;
+        this.isCorrect = false;
+    }
+
     text: string | undefined;
-    isCorrect: boolean | undefined;
-    isSelected: boolean | undefined;
+    isCorrect: boolean;
+    isSelected: boolean;
 
 }
 

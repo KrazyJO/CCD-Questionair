@@ -44,6 +44,7 @@ class Transformer implements ITransformer {
 
     newQuestion(line: string) {
         const question = new Question();
+        this.currentQuestion = question;
         question.text = line.substring(1);
         this.questions.push(question);
     }
