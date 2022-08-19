@@ -1,11 +1,10 @@
 import React from 'react';
-import Interactor from '../Interactor';
 import Answer from '../Model/Answer';
 import Question from '../Model/Question';
 
 type QuestionProps = {
     question: Question;
-    answerSelected: (answ: Answer, question: Question) => void;
+    answerSelected?: (answ: Answer, question: Question) => void;
 }
 
 class QuestionElement extends React.Component<QuestionProps, any> {
@@ -23,7 +22,7 @@ class QuestionElement extends React.Component<QuestionProps, any> {
                               name="lang"
                               checked={answ.isSelected}
                               value={answ.text}
-                              onChange={() => this.props.answerSelected(answ, this.props.question)}
+                              onChange={() => this.props.answerSelected?.(answ, this.props.question)}
                             /> {answ.text}
                           </label>
                         })
