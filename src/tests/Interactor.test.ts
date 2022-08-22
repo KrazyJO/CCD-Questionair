@@ -81,7 +81,7 @@ test('isQuestionCorrectAnswered(): no', () => {
     const answ1 = new Answer();
     const answ2 = new Answer();
     answ2.isCorrect = false;
-    answ2.isSelected = false;
+    answ2.isSelected = true;
     question.answers.push(answ1);
     question.answers.push(answ2);
 
@@ -103,7 +103,7 @@ test('aggregateScore()', () => {
     const answ21 = new Answer();
     const answ22 = new Answer();
     answ22.isCorrect = false;
-    answ22.isSelected = false;
+    answ22.isSelected = true;
     question2.answers.push(answ21);
     question2.answers.push(answ22);
 
