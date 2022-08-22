@@ -13,7 +13,7 @@ class QuestionElement extends React.Component<QuestionProps, any> {
         return (
             <div>
                 <div className='question'>{this.props.question.text}</div>
-                <div>
+                <div className='answerList'>
                     {
                         this.props.question.answers.map((answ, i) => {
                             return <label key={i}>

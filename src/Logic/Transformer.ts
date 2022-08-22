@@ -14,8 +14,10 @@ class Transformer implements ITransformer {
     buildQuestions(lines: string[]): Question[] {
     
         for(let line of lines) {
+
             if(this.isQuestion(line)) {
                 this.newQuestion(line);
+                this.addDefaultAnswer();
             } else {
                 const answer = this.addAnswerToQuestion(line);
                 if (this.isCorrect(line)) {
@@ -52,6 +54,12 @@ class Transformer implements ITransformer {
     makeAnswerCorrect(answer: Answer) {
         answer.isCorrect = true;
         answer.text = answer.text?.substring(1);
+    }
+
+    addDefaultAnswer() {
+        const answ = new Answer();
+        answ.text = "Don't know";
+        this.currentQuestion?.answers.push(answ);
     }
 
 }

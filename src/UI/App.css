@@ -1,3 +1,20 @@
 header {
     text-align: center;
+    font-size: 24px;
+}
+.answerList {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+.question {
+    padding-top: 15px;
+    font-style: italic;
+}
+button {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.question-list {
+    padding-left: 15px;
 }
